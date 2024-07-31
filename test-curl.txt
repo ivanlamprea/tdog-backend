@@ -1,0 +1,58 @@
+
+// Prueba API ruta registro
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"ivan", "last_name":"lamprea", "nick": "@ivylp", "email": "ivanlamprea@gmail.com", "password": "123123" }' http://localhost:3900/api/user/register | json
+
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"milena", "last_name":"ramirez", "nick": "@miledgrafica", "email": "miledgrafica@gmail.com", "password": "234234" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"isabel", "last_name":"guerrero", "nick": "@isaguerrero", "email": "isabelguerrero@gmail.com", "password": "345345" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"juan", "last_name":"rodriguéz", "nick": "@juanr57", "email": "juanr57@gmail.com", "password": "456456" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"jacob", "last_name":"rodriguéz", "nick": "@jacobrod", "email": "jacobrod@gmail.com", "password": "567567" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"sara", "last_name":"rodriguéz", "nick": "@srjurod", "email": "srjurod@gmail.com", "password": "678678" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"eliana", "last_name":"guerrero", "nick": "@elianita.guerrero", "email": "elianita.guerrero@gmail.com", "password": "789789" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"omar", "last_name":"bolivar", "nick": "@omar3.b", "email": "omar3.b@gmail.com", "password": "890890" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"daniel", "last_name":"bordamalo", "nick": "@danniborda", "email": "danniborda@gmail.com", "password": "901901" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"lorenza", "last_name":"bordamalo", "nick": "@lorzbg", "email": "lorzbg@gmail.com", "password": "012012" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"rosa", "last_name":"guerrero", "nick": "@rosita_g", "email": "rosita_g@gmail.com", "password": "112233" }' http://localhost:3900/api/user/register | json
+curl -X POST -H "Content-Type: application/json" -d '{"name" :"andres", "last_name":"lamprea", "nick": "@anddylamp", "email": "anddylamp@gmail.com", "password": "223344" }' http://localhost:3900/api/user/register | json
+
+// Prueba API ruta login
+curl -X POST -H "Content-Type: application/json" -d '{"email": "ivanlamprea@gmail.com", "password":"123123" }' http://localhost:3900/api/user/login | json 
+
+// Obtener perfíl
+
+curl -X GET -H "Authorization: YOUR_TOKEN_HERE" http://localhost:3900/api/user/profile/666a67b1cf7960dc8197c788 | json 
+curl -X GET -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NjZhNjdiMWNmNzk2MGRjODE5N2M3ODgiLCJyb2xlIjoicm9sZV91c2VyIiwibmFtZSI6Iml2YW4iLCJpYXQiOm51bGwsImV4cCI6MTcyMTI0MjgzMn0.J9qV5a73CwsJfY8NL-QOmQQ-wW9DjmwBn0mKwck91MY" http://localhost:3900/api/user/profile/666a67b1cf7960dc8197c788 | json 
+
+// Obtener listado de usuarios por pagina
+curl -X GET -H "Authorization: YOUR_TOKEN_HERE" http://localhost:3900/api/user/list/1
+
+
+// Actualizar usuario
+
+curl -X PUT -H "Authorization: YOUR_TOKEN_HERE" -d '{"name": "new ivan", "last_name": "Lamprea Guerrero", "nick": "@ivylp", "email": "ivanlamprea@gmail.com", "password": "123123"}' http://localhost:3900/api/user/update | json
+
+
+
+curl -X PUT -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NjZhNjdiMWNmNzk2MGRjODE5N2M3ODgiLCJyb2xlIjoicm9sZV91c2VyIiwibmFtZSI6Iml2YW4iLCJpYXQiOm51bGwsImV4cCI6MTcyMTMzODQzMX0.nlgUDN_9hrlKVxQIpp1f9d7OhyoxV3uT00tCv0WoPFg" -d '{"name": "new ivan", "nick": "@ivylp", "email": "ivanlamprea@gmail.com", "password": "123123"}' http://localhost:3900/api/user/update | json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Enlaces documentación correo
+
+https://stripo.email/blog/email-template-size-width-height/
+https://moosend.com/blog/email-sizes/
+https://www.wyzowl.com/human-attention-span/
+https://selzy.com/en/blog/email-template-size/
+https://mailtrap.io/blog/email-template-size/
